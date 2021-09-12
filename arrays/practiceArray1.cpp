@@ -4,7 +4,7 @@
 int findMaxConsecutiveOnes(std::vector<int> &nums)
 {
 
-    //If the vector has a size of 1 (the minimum) then we just check if is a ONE or ZERO
+    //If the array has a size of 1 (the minimum) then we just check if is a ONE or ZERO
     if (nums.size() == 1)
     {
         if (nums[0] == 1)
@@ -18,7 +18,7 @@ int findMaxConsecutiveOnes(std::vector<int> &nums)
     int max = 0;
     int rep = 0;
 
-    //I am using an iterator to iterate through the vector
+    //I am using an iterator to iterate through the array
     for (int i = 0; i < nums.size(); i++)
     {
 
@@ -35,6 +35,7 @@ int findMaxConsecutiveOnes(std::vector<int> &nums)
             {
                 max = rep;
             }
+            return max;
         }
 
         // If the next number is a zero, then we just check if the current repetition is bigger than the previous one
